@@ -1,35 +1,35 @@
 fn main() {
     // unsigned integer
     // u8, u16, u32, u64, u128
-    let _unsigned: u32 = 10;
+    let unsigned: u32 = 10;
 
     // signed integer
     // i8, i16, i32, i64, i128
-    let _signed = -10;
+    let signed = -10;
 
     // float is used for decimals
-    let _float = 0.32;
+    let float = 0.32;
 
     // println!("Different numbers => {}, {}, {}", unsigned, signed, float);
 
     // char is used for single character
-    let _character = 'a';
+    let character = 'a';
     // println!("Character => {}", character);
 
     // boolean is used for true or false
-    let _boolean = true;
+    let boolean = true;
     // println!("Boolean => {}", boolean);
 
     // tuple is used for grouping different data types
-    let _tuple = (1, -2, 3.0, 4, true);
+    let tuple = (1, -2, 3.0, 4, true);
     // println!("Tuple => {:?}", tuple);
 
     // array is used for grouping same data types
-    let _array = [1, 2, 3, 4, 5];
+    let array = [1, 2, 3, 4, 5];
     // println!("Array => {:?}", array);
 
     // string is used for grouping characters
-    let _string = "Hello World";
+    let string = "Hello World";
     // println!("String => {}", string);
 
     // vector is used for grouping same data types and it is dynamic
@@ -50,15 +50,7 @@ fn main() {
         Green,
         Blue,
     }
-    // Use the enum variants
-    let primary = Color::Red;
-    let secondary = Color::Green;
-    let third:Color=Color::Blue;
-    
-    matcher_fn(primary);
-    matcher_fn(secondary);
-    matcher_fn(third);
-  
+
     // hash set is used for grouping same data types
 
     let mut hash_set = std::collections::HashSet::new();
@@ -101,13 +93,4 @@ fn main() {
     for (index, value) in array.iter().enumerate() {
         println!("Value at index {}: {}", index, value);
     }
-
-    fn matcher_fn(color:Color){
-        match color{
-            Color::Red =>println!("This is red"),
-            Color::Blue=>println!("This is blue"),
-            Color::Green=>println!("This is green")
-        }
-    }
 }
-
