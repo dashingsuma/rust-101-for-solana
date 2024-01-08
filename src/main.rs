@@ -93,4 +93,40 @@ fn main() {
     for (index, value) in array.iter().enumerate() {
         println!("Value at index {}: {}", index, value);
     }
+
+    // Implementation
+    
+    // Define a struct
+    struct Rectangle { 
+        width: u32, 
+        height: u32
+    }
+    
+    // Add a method to the struct via impl keyword
+    impl Rectangle { 
+        fn area(&self) -> u32 { 
+            self.width * self.height 
+        }
+    }
+    
+    let rect = Rectangle { width: 30, height: 50 };
+    println!("The area of the rectangle is {}", rect.area());
+    
+    // Implementation using trait
+    trait HasArea { 
+        fn area(&self) -> f64;
+    }
+    
+    struct Square { 
+        side: f64
+    }
+    
+    impl HasArea for Square { 
+        fn area(&self) -> f64 { 
+            self.side * self.side 
+        }
+    }
+
+    let area_calc = Square {side: 2.0};
+    println!("Calculation for the area of the rectangle using a trait is {}", area_calc.area());
 }
