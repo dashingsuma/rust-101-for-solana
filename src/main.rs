@@ -10,38 +10,38 @@ fn main() {
     // float is used for decimals
     let float = 0.32;
 
-    // println!("Different numbers => {}, {}, {}", unsigned, signed, float);
+    println!("Different numbers => {}, {}, {}", unsigned, signed, float);
 
     // char is used for single character
     let character = 'a';
-    // println!("Character => {}", character);
+     println!("Character => {}", character);
 
     // boolean is used for true or false
     let boolean = true;
-    // println!("Boolean => {}", boolean);
+    println!("Boolean => {}", boolean);
 
     // tuple is used for grouping different data types
     let tuple = (1, -2, 3.0, 4, true);
-    // println!("Tuple => {:?}", tuple);
+     println!("Tuple => {:?}", tuple);
 
     // array is used for grouping same data types
     let array = [1, 2, 3, 4, 5];
-    // println!("Array => {:?}", array);
+    println!("Array => {:?}", array);
 
     // string is used for grouping characters
     let string = "Hello World";
-    // println!("String => {}", string);
+     println!("String => {}", string);
 
     // vector is used for grouping same data types and it is dynamic
     let mut vector = vec![1, 2, 3, 4, 5];
     vector.push(6);
-    // println!("Vector => {:?}", vector);
+     println!("Vector => {:?}", vector);
 
     // hash map is used for grouping 2 different data types as key value pair
     let mut hash_map = std::collections::HashMap::new();
     hash_map.insert("Solana", 100);
     hash_map.insert("age", 2);
-    // println!("Hash Map => {:?}", hash_map);
+     println!("Hash Map => {:?}", hash_map);
 
     // enums
 
@@ -50,6 +50,18 @@ fn main() {
         Green,
         Blue,
     }
+    let colors = vec![Color::Red, Color::Green, Color::Blue];
+
+    for color in colors {
+        match color {
+            Color::Red => println!("The color is Red"),
+            Color::Green => println!("The color is Green"),
+            Color::Blue => println!("The color is Blue"),
+        }
+    
+    }
+
+    
 
     // hash set is used for grouping same data types
 
@@ -58,7 +70,7 @@ fn main() {
     hash_set.insert("John Doe");
     hash_set.insert("Jane Doe");
 
-    // println!("Hash Set => {:?}", hash_set);
+     println!("Hash Set => {:?}", hash_set);
 
     // Looping
 
